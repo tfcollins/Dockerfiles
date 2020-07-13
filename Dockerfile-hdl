@@ -21,8 +21,4 @@ RUN DEBIAN_FRONTEND=$DEBIAN_FRONTEND dpkg-reconfigure dash
 RUN apt-get clean
 
 # Entrypoint for runtime pre-processing
-COPY docker-entrypoint-hdl.sh /usr/local/bin/
-#RUN ["chmod","+x","/usr/local/bin/docker-entrypoint-hdl.sh"]
-#ENTRYPOINT ["cat /usr/local/bin/docker-entrypoint-hdl.sh"]
-ENTRYPOINT ["ls","/usr/local/bin/"]
-#ENTRYPOINT ["docker-entrypoint-hdl.sh"]
+COPY docker-entrypoint-hdl.sh /usr/local/bin/docker-entrypoint.sh
