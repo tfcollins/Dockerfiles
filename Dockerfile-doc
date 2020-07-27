@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN DEBIAN_FRONTEND=$DEBIAN_FRONTEND apt update
 RUN DEBIAN_FRONTEND=$DEBIAN_FRONTEND apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
-RUN DEBIAN_FRONTEND=$DEBIAN_FRONTEND apt-get install -y texlive-font-utils rubber make
+RUN DEBIAN_FRONTEND=$DEBIAN_FRONTEND apt-get install -y texlive-font-utils rubber make build-essential
 
 # Set BASH as the default shell
 RUN echo "dash dash/sh boolean false" | debconf-set-selections 
