@@ -2,6 +2,13 @@
 set -e
 
 # Copy read-only folder(s) into readable folder(s)
+if [ -d "/mlhspro" ]; then
+  echo "Adding HSP files"
+  cp -r /mlhspro /mlhsp
+else
+  echo "/mlhsp folder does not exist"
+fi
+
 if [ -d "/root/.Xilinxro" ]; then
   echo "Adding Xilinx dot files"
   cp -r /root/.Xilinxro /root/.Xilinx
